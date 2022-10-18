@@ -31,7 +31,7 @@
   <link href="{% static 'making_spaces/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
   <link href="{% static 'making_spaces/vendor/aos/aos.css' %}" rel="stylesheet">
   <link href="{% static 'making_spaces/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
-  <link href="{% static 'making_spaces/assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'making_spaces/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="{% static 'making_spaces/css/main.css' %}" rel="stylesheet">
@@ -61,32 +61,12 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">Nosotros</a></li>
-          <li><a href="services.html">Servicios</a></li>
-          <li><a href="projects.html">Proyectos</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <!-- ======= Dropdown ======= -->
-          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i
-                class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                    class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> -->
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="{% url 'home' %}" class="active">Home</a></li>
+          <li><a href="{% url 'about' %}">Nosotros</a></li>
+          <li><a href="{% url 'services' %}">Servicios</a></li>
+          <li><a href="{% url 'projects' %}">Proyectos</a></li>
+          <li><a href="{% url 'blog' %}">Blog</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -94,8 +74,9 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero">
 
+  {% block replace %}
+  <section id="hero" class="hero">
     <div class="info d-flex align-items-center">
       <div class="container">
         <div class="row justify-content-center">
@@ -133,8 +114,12 @@
     </div>
 
   </section><!-- End Hero Section -->
+  {% endblock replace %}
+
+
 
   <main id="main">
+    {% block content %}
 
     <!-- ======= Get Started Section ======= -->
     <section id="get-started" class="get-started section-bg">
@@ -154,26 +139,24 @@
           </div>
 
           <div class="col-lg-5" data-aos="fade">
-            <form action="forms/quote.php" method="post" class="php-email-form">
-              <h3>Get a quote</h3>
-              <p>Vel nobis odio laboriosam et hic voluptatem. Inventore vitae totam. Rerum repellendus enim linead sero
-                park flows.</p>
+            <form action="" method="post" class="php-email-form">
+              <h3>Obtén una cotización</h3>
               <div class="row gy-3">
 
                 <div class="col-md-12">
-                  <input type="text" name="name" class="form-control" placeholder="Name" required>
+                  <input type="text" name="name" class="form-control" placeholder="Nombre" required>
                 </div>
 
                 <div class="col-md-12 ">
-                  <input type="email" class="form-control" name="email" placeholder="Email" required>
+                  <input type="email" class="form-control" name="email" placeholder="Correo" required>
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="phone" placeholder="Phone" required>
+                  <input type="text" class="form-control" name="phone" placeholder="Teléfono">
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Mensaje" required></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
@@ -181,7 +164,7 @@
                   <div class="error-message"></div>
                   <div class="sent-message">Your quote request has been sent successfully. Thank you!</div>
 
-                  <button type="submit">Get a quote</button>
+                  <button type="submit">Obtener contización</button>
                 </div>
 
               </div>
@@ -279,106 +262,9 @@
               </div>
             </div>
           </div><!-- End Card Item -->
-
         </div>
-
       </div>
     </section><!-- End Constructions Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>Services</h2>
-          <p>Voluptatem quibusdam ut ullam perferendis repellat non ut consequuntur est eveniet deleniti fignissimos eos
-            quam</p>
-        </div>
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <div class="icon">
-                <i class="fa-solid fa-mountain-city"></i>
-              </div>
-              <h3>Nesciunt Mete</h3>
-              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis
-                tempore et consequatur.</p>
-              <a href="service-details.html" class="readmore stretched-link">Learn more <i
-                  class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
-              </div>
-              <h3>Eosle Commodi</h3>
-              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut
-                nesciunt dolorem.</p>
-              <a href="service-details.html" class="readmore stretched-link">Learn more <i
-                  class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="fa-solid fa-compass-drafting"></i>
-              </div>
-              <h3>Ledo Markt</h3>
-              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci
-                eos earum corrupti.</p>
-              <a href="service-details.html" class="readmore stretched-link">Learn more <i
-                  class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="fa-solid fa-trowel-bricks"></i>
-              </div>
-              <h3>Asperiores Commodit</h3>
-              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident
-                adipisci neque.</p>
-              <a href="service-details.html" class="readmore stretched-link">Learn more <i
-                  class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="fa-solid fa-helmet-safety"></i>
-              </div>
-              <h3>Velit Doloremque</h3>
-              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem
-                alias eius labore.</p>
-              <a href="service-details.html" class="readmore stretched-link">Learn more <i
-                  class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
-              </div>
-              <h3>Dolori Architecto</h3>
-              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti
-                recusandae ducimus enim.</p>
-              <a href="service-details.html" class="readmore stretched-link">Learn more <i
-                  class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
 
     <!-- ======= Alt Services Section ======= -->
     <section id="alt-services" class="alt-services">
@@ -428,10 +314,8 @@
                   Et eligendi</p>
               </div>
             </div><!-- End Icon Box -->
-
           </div>
         </div>
-
       </div>
     </section><!-- End Alt Services Section -->
 
@@ -849,7 +733,8 @@
           </p>
         </div>
       </div>
-    </div> --><!-- End testimonial item -->
+    </div> -->
+    <!-- End testimonial item -->
 
     <!-- <div class="swiper-slide">
       <div class="testimonial-wrap">
@@ -869,7 +754,8 @@
           </p>
         </div>
       </div>
-    </div> --><!-- End testimonial item -->
+    </div> -->
+    <!-- End testimonial item -->
 
     <!-- <div class="swiper-slide">
       <div class="testimonial-wrap">
@@ -890,14 +776,16 @@
           </p>
         </div>
       </div>
-    </div> --><!-- End testimonial item -->
+    </div> -->
+    <!-- End testimonial item -->
 
     <!-- </div>
     <div class="swiper-pagination"></div>
     </div>
 
     </div>
-    </section> --><!-- End Testimonials Section -->
+    </section> -->
+    <!-- End Testimonials Section -->
 
     <!-- ======= Recent Blog Posts Section ======= -->
     <!-- <section id="recent-blog-posts" class="recent-blog-posts">
@@ -1014,7 +902,9 @@
     </section> -->
     <!-- End Recent Blog Posts Section -->
 
+    {% endblock content %}
   </main><!-- End #main -->
+
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
