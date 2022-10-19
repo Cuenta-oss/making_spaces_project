@@ -15,7 +15,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{% static 'making_spaces/img/favicon.png' %}" rel="icon">
+  <!-- <link href="{% static 'making_spaces/img/favicon.png' %}" rel="icon"> -->
   <link href="{% static 'making_spaces/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -66,7 +66,7 @@
           <li><a href="{% url 'services' %}">Servicios</a></li>
           <li><a href="{% url 'projects' %}">Proyectos</a></li>
           <li><a href="{% url 'blog' %}">Blog</a></li>
-          <li><a href="{% url 'contact' %}">Contact</a></li>
+          <li><a href="{% url 'contact' %}">Contacto</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -140,23 +140,28 @@
 
           <div class="col-lg-5" data-aos="fade">
             <form action="" method="post" class="php-email-form">
+              {% csrf_token %}
               <h3>Obtén una cotización</h3>
               <div class="row gy-3">
 
                 <div class="col-md-12">
-                  <input type="text" name="name" class="form-control" placeholder="Nombre" required>
+                  {{form.nombre}}
+                  <!-- <input type="text" name="name" class="form-control" placeholder="Nombre" required> -->
                 </div>
 
                 <div class="col-md-12 ">
-                  <input type="email" class="form-control" name="email" placeholder="Correo" required>
+                  {{form.correo}}
+                  <!-- <input type="email" class="form-control" name="email" placeholder="Correo" required> -->
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="phone" placeholder="Teléfono">
+                  {{form.telefono}}
+                  <!-- <input type="text" class="form-control" name="phone" placeholder="Teléfono"> -->
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Mensaje" required></textarea>
+                  {{form.mensaje}}
+                  <!-- <textarea class="form-control" name="message" rows="6" placeholder="Mensaje" required></textarea> -->
                 </div>
 
                 <div class="col-md-12 text-center">
@@ -164,7 +169,7 @@
                   <div class="error-message"></div>
                   <div class="sent-message">Your quote request has been sent successfully. Thank you!</div>
 
-                  <button type="submit">Obtener contización</button>
+                  <button type="submit">Obtener cotización</button>
                 </div>
 
               </div>
