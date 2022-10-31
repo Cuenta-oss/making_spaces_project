@@ -3,7 +3,8 @@
 <main id="main">
   {% block replace %}
   <!-- ======= Breadcrumbs ======= -->
-  <div class="breadcrumbs d-flex align-items-center" style="background-image: url('/static/making_spaces/img/breadcrumbs-bg.jpg');">
+  <div class="breadcrumbs d-flex align-items-center"
+    style="background-image: url('/static/making_spaces/img/breadcrumbs-bg.jpg');">
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
       <h2>Nosotros</h2>
@@ -14,7 +15,10 @@
 
     </div>
   </div><!-- End Breadcrumbs -->
+  {% endblock replace%}
 
+
+  {% block content %}
   <!-- ======= About Section ======= -->
   <section id="about" class="about">
     <div class="container" data-aos="fade-up">
@@ -24,25 +28,37 @@
         <div class="col-lg-7 about-img" style="background-image: url(/static/making_spaces/img/about.jpg);"></div>
 
         <div class="col-lg-7">
-          <h2>Consequatur eius et magnam</h2>
+          <h2>Making Spaces S.A.S</h2>
           <div class="our-story">
-            <h4>Est 1988</h4>
-            <h3>Our Story</h3>
-            <p>Inventore aliquam beatae at et id alias. Ipsa dolores amet consequuntur minima quia maxime autem. Quidem
-              id sed ratione. Tenetur provident autem in reiciendis rerum at dolor. Aliquam consectetur laudantium
-              temporibus dicta minus dolor.</p>
-            <ul>
+            <h4>Desde 2003</h4>
+            <h3>Historia</h3>
+            <p>En nuestros inicios comenzamos en la ciudad de Sincelejo, Sucre, con la constructora Héctor Salgado,
+              bajo el nombre de Néstor Arrieta.
+              <br>
+              <br>
+              Trabajamos en el departamento de Sucre con diversos constructores públicos y privados durante un periodo
+              de 5 años consecutivos, desde 2003.
+              <br>
+              <br>
+              En 2009 llegamos a la ciudad de Barranquilla en un proyecto de apartamento ubicado en la Cra 50 con 94
+              edificio Fenix, fue la puerta de entrada a esa zonza y empezamos a contratar con nuevos y diversos
+              clientes.
+              <br>
+              <br>
+              En 2014 nos trasladamos a Santa Marta donde trabajamos de la mano con Contructora Jimenénez en proyectos
+              de apartamentos Two Towers, Edificio Portovela, Edificio Salguero Beach.
+              <br>
+              <br>
+              En Making Spaces en esencia tenemos 15 años de experiencia en proyectos grandes, medianos y pequeños,
+              nos hemos caractirzado por la puntualidad y el buen servicio.
+            </p>
+            <!-- <ul>
               <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commo</span></li>
               <li><i class="bi bi-check-circle"></i> <span>Duis aute irure dolor in reprehenderit in</span></li>
               <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
             </ul>
             <p>Vitae autem velit excepturi fugit. Animi ad non. Eligendi et non nesciunt suscipit repellendus porro in
-              quo eveniet. Molestias in maxime doloremque.</p>
-
-            <div class="watch-video d-flex align-items-center position-relative">
-              <i class="bi bi-play-circle"></i>
-              <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox stretched-link">Watch Video</a>
-            </div>
+              quo eveniet. Molestias in maxime doloremque.</p> -->
           </div>
         </div>
 
@@ -112,7 +128,7 @@
     <div class="container" data-aos="fade-up">
 
       <div class="row justify-content-around gy-4">
-        <div class="col-lg-6 img-bg" style="background-image: url(assets/img/alt-services.jpg);" data-aos="zoom-in"
+        <div class="col-lg-6 img-bg" style="background-image: url(/static/making_spaces/img/alt-services.jpg);" data-aos="zoom-in"
           data-aos-delay="100"></div>
 
         <div class="col-lg-5 d-flex flex-column justify-content-center">
@@ -209,7 +225,7 @@
           </div><!-- End Icon Box -->
         </div>
 
-        <div class="col-lg-6 img-bg" style="background-image: url(assets/img/alt-services-2.jpg);" data-aos="zoom-in"
+        <div class="col-lg-6 img-bg" style="background-image: url(/static/making_spaces/img/alt-services-2.jpg);" data-aos="zoom-in"
           data-aos-delay="100"></div>
       </div>
 
@@ -230,7 +246,7 @@
 
         <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
           <div class="member-img">
-            <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+            <img src="/static/making_spaces/img/team/team-1.jpg" class="img-fluid" alt="">
             <div class="social">
               <a href="#"><i class="bi bi-twitter"></i></a>
               <a href="#"><i class="bi bi-facebook"></i></a>
@@ -247,7 +263,7 @@
 
         <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
           <div class="member-img">
-            <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+            <img src="/static/making_spaces/img/team/team-2.jpg" class="img-fluid" alt="">
             <div class="social">
               <a href="#"><i class="bi bi-twitter"></i></a>
               <a href="#"><i class="bi bi-facebook"></i></a>
@@ -265,7 +281,7 @@
 
         <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
           <div class="member-img">
-            <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+            <img src="/static/making_spaces/img/team/team-3.jpg" class="img-fluid" alt="">
             <div class="social">
               <a href="#"><i class="bi bi-twitter"></i></a>
               <a href="#"><i class="bi bi-facebook"></i></a>
@@ -283,7 +299,7 @@
 
         <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
           <div class="member-img">
-            <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+            <img src="/static/making_spaces/img/team/team-4.jpg" class="img-fluid" alt="">
             <div class="social">
               <a href="#"><i class="bi bi-twitter"></i></a>
               <a href="#"><i class="bi bi-facebook"></i></a>
@@ -301,7 +317,7 @@
 
         <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
           <div class="member-img">
-            <img src="assets/img/team/team-5.jpg" class="img-fluid" alt="">
+            <img src="/static/making_spaces/img/team/team-5.jpg" class="img-fluid" alt="">
             <div class="social">
               <a href="#"><i class="bi bi-twitter"></i></a>
               <a href="#"><i class="bi bi-facebook"></i></a>
@@ -319,7 +335,7 @@
 
         <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
           <div class="member-img">
-            <img src="assets/img/team/team-6.jpg" class="img-fluid" alt="">
+            <img src="/static/making_spaces/img/team/team-6.jpg" class="img-fluid" alt="">
             <div class="social">
               <a href="#"><i class="bi bi-twitter"></i></a>
               <a href="#"><i class="bi bi-facebook"></i></a>
@@ -459,8 +475,9 @@
 
     </div>
   </section><!-- End Testimonials Section -->
-  {% endblock replace %}
+  {% endblock content %}
 </main><!-- End #main -->
+
 
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">

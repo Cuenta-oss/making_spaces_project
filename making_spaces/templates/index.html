@@ -164,11 +164,18 @@
                   <!-- <textarea class="form-control" name="message" rows="6" placeholder="Mensaje" required></textarea> -->
                 </div>
 
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your quote request has been sent successfully. Thank you!</div>
 
+                <div class="col-md-12 text-center">
+                  {% if messages %}
+
+                  {% for msg in messages %}
+                  <div class="loading">Loading</div>
+                  <div class="sent-message">{{msg}}</div>
+
+                  {% endfor %}
+
+                  {% endif %}
+                  <div class="error-message">{{error}}</div>
                   <button type="submit">Obtener cotización</button>
                 </div>
 
